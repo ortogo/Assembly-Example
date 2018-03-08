@@ -7,7 +7,7 @@ using SolidWorks.Interop.sldworks;
 using SolidWorks.Interop.swconst;
 using SolidWorks.Interop.swcommands;
 
-namespace BaseProjectSolidWorks2
+namespace AssemblyExample
 {
     static class Program
     {

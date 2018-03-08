@@ -2,7 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 
-namespace BaseProjectSolidWorks2
+namespace AssemblyExample
 {
     public partial class MainForm : Form
     {

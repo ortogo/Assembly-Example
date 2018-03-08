@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SolidWorks.Interop.sldworks;
 using SolidWorks.Interop.swconst;
-using SolidWorks.Interop.swcommands;
-using System.Diagnostics;
 
-namespace BaseProjectSolidWorks2
+namespace AssemblyExample
 {
     class ProjectDocument
     {

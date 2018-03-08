@@ -1,4 +1,4 @@
-﻿namespace BaseProjectSolidWorks2
+﻿namespace AssemblyExample
 {
     partial class MainForm
     {
