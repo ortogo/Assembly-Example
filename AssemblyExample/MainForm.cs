@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace BaseProjectSolidWorks2
@@ -19,7 +13,8 @@ namespace BaseProjectSolidWorks2
         {
             InitializeComponent();
             UpdateInput();
-            SelectMufta.Filter = ProjectDocument.asmName + "|" 
+            PathToMufta.Text = Path.GetFullPath(ProjectDocument.workPath + ProjectDocument.asmName);
+            SelectMufta.Filter = ProjectDocument.asmName + "|"
                 + ProjectDocument.asmName + "|Любые(*.*)|*.*";
         }
 
@@ -30,7 +25,8 @@ namespace BaseProjectSolidWorks2
                 UpdateInput();
                 pd.Build();
                 MessageBox.Show("Build finished");
-            } else
+            }
+            else
             {
                 MessageBox.Show("Выберите " + ProjectDocument.asmName);
             }
@@ -39,7 +35,7 @@ namespace BaseProjectSolidWorks2
         private void button2_Click(object sender, EventArgs e)
         {
             UpdateInput();
-            
+
         }
 
         private void UpdateInput()
@@ -48,7 +44,7 @@ namespace BaseProjectSolidWorks2
             pd.countFingers = Int32.Parse(Fingers.Text);
             pd.assemblyPath = PathToMufta.Text;
             pd.UpdateParams();
-            MuftaParams.Text = $"Расчитанный диаметр {pd.calculatedDiameter*1000.0:F2} мм"
+            MuftaParams.Text = $"Расчитанный диаметр {pd.calculatedDiameter * 1000.0:F2} мм"
                 + Environment.NewLine +
                 $"Принятый диаметр {pd.nominalDiameter * 1000.0} мм по ряду R20";
         }

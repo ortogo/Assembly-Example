@@ -21,7 +21,7 @@ namespace BaseProjectSolidWorks2
         public double calculatedDiameter;
 
         // папка с муфтой
-        public const string workPath = "D:\\sapr\\mufta\\сборкой\\";
+        public const string workPath = "./Resources/";
         // имя сборки муфты
         public const string asmName = "муфта.SLDASM";
 
